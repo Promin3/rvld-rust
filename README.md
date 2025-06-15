@@ -17,3 +17,4 @@ qemu-riscv64 out
 
 # Hello, World.
 ```
+缓慢更新中，get fucked by rust...
