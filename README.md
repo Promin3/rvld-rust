@@ -17,6 +17,3 @@ qemu-riscv64 out
 
 # Hello, World.
 ```
-
-rvld-rust 没有除标准库外的外部依赖。
-PLCT 实验室基于此项目推出了一门“从零开始实现链接器”的公开课，课程官网：[https://ksco.cc/rvld](https://ksco.cc/rvld)。
