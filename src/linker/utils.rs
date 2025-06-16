@@ -6,13 +6,6 @@ pub fn fatal(msg: &str) -> ! {
 }
 
 #[allow(dead_code)]
-pub fn assert(condition: bool) {
-    if !condition {
-        fatal("assertion failed");
-    }
-}
-
-#[allow(dead_code)]
 pub fn read_to<T: Copy>(data: &[u8]) -> T {
     let size = mem::size_of::<T>();
     if data.len() < size {

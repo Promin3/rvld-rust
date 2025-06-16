@@ -1,0 +1,1 @@
+pub const SHT_SYMTAB:u32 = 2;
