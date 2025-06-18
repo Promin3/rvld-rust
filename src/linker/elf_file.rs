@@ -4,7 +4,7 @@ use std::io::Read;
 
 pub struct ElfFile {
     pub name: String,
-    pub contents:  &'static [u8],
+    pub contents:  &'static [u8], //字节寻址
 }
 
 impl ElfFile {

@@ -1,5 +1,5 @@
-use crate::linker::elf::{ELF_HDR_SIZE, SECTION_HDR_SIZE, SYM_SIZE, ElfHeader, Sym, SectionHeader};
-use crate::linker::file::ElfFile;
+use crate::linker::elf_structures::{ELF_HDR_SIZE, SECTION_HDR_SIZE, SYM_SIZE, ElfHeader, Sym, SectionHeader};
+use crate::linker::elf_file::ElfFile;
 use crate::linker::magic::check_magic;
 use crate::linker::utils::{fatal, read_to};
 use std::rc::Rc;

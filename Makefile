@@ -1,11 +1,17 @@
+VERSION = 0.1.0
+COMMIT_ID = $(shell git rev-list -1 HEAD)
 TESTS := $(wildcard tests/*.sh)
 
 build:
-	cargo build
+	@RUSTFLAGS="--cfg version=\"$(VERSION)-$(COMMIT_ID)\"" cargo build 
+	@ln -sf target/debug/rvld-rust ld
+
 
 test: build
-	$(MAKE) $(TESTS) # Run tests rule which defined below
+	@CC="riscv64-linux-gnu-gcc" \
+	$(MAKE) $(TESTS) 
 	@printf '\e[32mPassed all tests\e[0m\n'
+
 
 $(TESTS):
 	@echo 'Testing' $@

@@ -2,9 +2,9 @@
 #[repr(C)]
 pub struct ElfHeader {
     // ident
-    pub ident:      [u8; 16],
+    pub ident:      [u8; 16], // 16 bytes
     /// executable,shared object,relocatable etc.
-    pub type_:      u16,
+    pub type_:      u16, // 2 bytes
     /// arm, x86, etc. 
     pub machine:    u16,
     /// version of the ELF format,typically 1 for original ELF

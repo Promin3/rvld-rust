@@ -1,8 +1,9 @@
-use crate::linker::config::SHT_SYMTAB;
-use crate::linker::file::ElfFile;
-use crate::linker::{elf::SectionHeader, inputfile::InputFile};
+use crate::linker::elf_file::ElfFile;
+use crate::linker::{elf_structures::SectionHeader, input_file::InputFile};
 use std::cell::RefCell;
 use std::rc::Rc;
+
+pub const SHT_SYMTAB:u32 = 2;
 
 pub struct Objectfile{
     pub inputfile: Rc<RefCell<InputFile>>, 

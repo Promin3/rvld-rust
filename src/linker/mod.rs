@@ -1,7 +1,9 @@
-pub mod file;
+pub mod elf_file;
 pub mod magic;
-pub mod elf;
-pub mod inputfile;
+pub mod elf_structures;
+pub mod input_file;
 pub mod utils;
-pub mod config;
-pub mod objectfile;
+pub mod object_file;
+pub mod context;
+pub mod machine_type;
+pub mod file_type;
